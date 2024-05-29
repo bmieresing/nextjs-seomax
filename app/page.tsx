@@ -3,6 +3,7 @@ import { createClient } from "@/utils/supabase/server";
 import { redirect } from "next/navigation";
 import Image from 'next/image';
 import miImagenSeoMax from '../public/imagenes/SeoMax-Dalle3.png';
+import miImagenSeo from '../public/imagenes/SEO-Dalle3.png';
 
 export default async function TodosPage() {
   const supabase = await createClient();
@@ -22,6 +23,8 @@ export default async function TodosPage() {
         Bienvenido
       </h1>
       <Image src={miImagenSeoMax} alt="miImagenSeoMax" />
+      <Separator className="w-full " />     
+      <Image src={miImagenSeo} alt="miImagenSeo" />
       <Separator className="w-full " />      
     </section>
   );
